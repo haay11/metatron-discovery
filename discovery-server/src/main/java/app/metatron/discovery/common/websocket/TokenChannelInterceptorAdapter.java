@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -67,7 +67,7 @@ public class TokenChannelInterceptorAdapter extends ChannelInterceptorAdapter {
       return message;
     }
 
-    // Set User infomation after getting JWT Token value
+    // Set User information after getting JWT Token value
     Principal principal = jwtTokenStore.readAuthentication(token).getUserAuthentication();
     if(principal == null && !StompCommand.DISCONNECT.equals(accessor.getCommand())) {
       return message;

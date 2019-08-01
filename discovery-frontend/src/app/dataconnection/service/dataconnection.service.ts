@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -240,7 +240,7 @@ export class DataconnectionService extends AbstractService {
   }
 
   // 테이블 인포메이션 검색.
-  public getTableInfomation(connectionId: string, databaseName: string, tableName: string, webSocketId: string, page: Page) {
+  public getTableInformation(connectionId: string, databaseName: string, tableName: string, webSocketId: string, page: Page) {
     let url = this.API_URL + `connections/${connectionId}/databases/${databaseName}/tables/${tableName}/information?webSocketId=${webSocketId}`;
     url += '&' + CommonUtil.objectToUrlString(page);
     return this.get(url);

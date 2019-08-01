@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -709,7 +709,7 @@ export class DetailWorkbenchSchemaBrowserComponent extends AbstractWorkbenchComp
     this.isMetadataListNoData = false;
     // 로딩 show
     this.loadingShow();
-    this.connectionService.getTableInfomation(connectionId, databaseName, tableName, webSocketId, page)
+    this.connectionService.getTableInformation(connectionId, databaseName, tableName, webSocketId, page)
       .then((result) => {
         // 호출 횟수 초기화
         this._getMetaDataReconnectCount = 0;

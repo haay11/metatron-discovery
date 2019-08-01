@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -141,7 +141,7 @@ export class DetailWorkbenchTableInfoDesc extends AbstractWorkbenchComponent imp
     this.selectedTable = this.params['selectedTable'];
     // 로딩 show
     this.loadingShow();
-    this.dataconnectionService.getTableInfomation(this.params['dataconnection'].id, this.params['dataconnection'].database, this.params['selectedTable'], WorkbenchService.websocketId, this.page)
+    this.dataconnectionService.getTableInformation(this.params['dataconnection'].id, this.params['dataconnection'].database, this.params['selectedTable'], WorkbenchService.websocketId, this.page)
       .then((data) => {
         // 호출 횟수 초기화
         this._getTableReconnectCount = 0;

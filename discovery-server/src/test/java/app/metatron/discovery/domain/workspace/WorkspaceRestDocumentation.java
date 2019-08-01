@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -95,7 +95,7 @@ public class WorkspaceRestDocumentation extends AbstractRestIntegrationTest {
               responseFields(
                 fieldWithPath("_embedded.workspaces").description("An array of <<resources-workspace, Workspace resources>>"),
                 fieldWithPath("_links").description("<<resources-workspace-links,Links>> to other resources"),
-                fieldWithPath("page").description("The page infomation")
+                fieldWithPath("page").description("The page information")
               ))
             )
     .when()
@@ -158,7 +158,7 @@ public class WorkspaceRestDocumentation extends AbstractRestIntegrationTest {
         responseFields(
           fieldWithPath("_embedded.workspaces[]").description("Result of searching shared workspaces"),
           fieldWithPath("_links").description("Self Links"),
-          fieldWithPath("page").description("Page infomation.")
+          fieldWithPath("page").description("Page information.")
         )
       ))
       .contentType(ContentType.JSON)

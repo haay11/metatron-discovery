@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -127,7 +127,7 @@ export class CreateDatasetSelecturlComponent extends AbstractPopupComponent impl
       this.currDelimiter = ( this.datasetFiles[0].fileFormat === FileFormat.CSV ? this.datasetFiles[0].delimiter : '');
       this.currColumnCount = ( this.datasetFiles[0].sheetInfo ? this.datasetFiles[0].sheetInfo[0].columnCount : 0 );
       this._setFileFormat(this.datasetFiles[0].fileFormat);
-      this._setDetailInfomation(0,0);
+      this._setDetailInformation(0,0);
 
     }
   }
@@ -460,7 +460,7 @@ export class CreateDatasetSelecturlComponent extends AbstractPopupComponent impl
       this.currDSIndex = dsIdx;
       this.currSheetIndex = 0;
 
-      this._setDetailInfomation(dsIdx, 0);
+      this._setDetailInformation(dsIdx, 0);
 
       this.currDelimiter = this.datasetFiles[dsIdx].delimiter;
 
@@ -511,7 +511,7 @@ export class CreateDatasetSelecturlComponent extends AbstractPopupComponent impl
       return;
     }
 
-    this._setDetailInfomation(dsIdx, sheetIdx);
+    this._setDetailInformation(dsIdx, sheetIdx);
 
     this.currSheetIndex = sheetIdx;
     this.datasetFiles[dsIdx].sheetIndex = sheetIdx;
@@ -706,7 +706,7 @@ export class CreateDatasetSelecturlComponent extends AbstractPopupComponent impl
 
         this.datasetFiles[idx].sheetInfo.push(info);
 
-        if ( this.currDSIndex === 0 ) this._setDetailInfomation(0, 0);
+        if ( this.currDSIndex === 0 ) this._setDetailInformation(0, 0);
 
       });
 
@@ -755,7 +755,7 @@ export class CreateDatasetSelecturlComponent extends AbstractPopupComponent impl
    * Detail Information of Selected Sheet
    * @private
    */
-  private _setDetailInfomation(dsIdx:number, sheetIdx?:number){
+  private _setDetailInformation(dsIdx:number, sheetIdx?:number){
 
     if (this.datasetFiles[dsIdx].fileFormat === FileFormat.EXCEL) {
       this.currDetail.detailName = this.datasetFiles[dsIdx].fileName;
